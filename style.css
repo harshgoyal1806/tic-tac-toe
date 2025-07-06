@@ -1,0 +1,97 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f3f4f6; /* Light gray background */
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 360px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Game section: Grid layout for the Tic Tac Toe board */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Cell Styling for Tic Tac Toe */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #e9e9e9;
+    border: 2px solid #ccc;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.2s ease;
+}
+
+/* Hover effect for cells */
+.cell:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Winning Condition Text */
+.winning {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+    font-weight: bold;
+    display: none; /* Initially hidden */
+}
+
+.winning.show {
+    display: block;
+    color: #d9534f; /* Red color for winning text */
+}
